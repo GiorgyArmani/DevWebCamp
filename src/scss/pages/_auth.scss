@@ -1,0 +1,11 @@
+@use '../base/mixins' as m;
+
+.auth{
+    @include m.contenedor-sm;
+//forma de anidar un selector correctamente en sass el & agrega inmediatamente despues del auth el __heading o__text
+   
+}
+
+.auth__text{
+    font-size: 2rem;
+}
