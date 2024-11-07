@@ -10,6 +10,10 @@ use Model\Registro;
 class DashboardController{
 
     public static function index(Router $router) {
+        if(!is_admin()){
+            header('Location: /login');
+            exit;
+        }
         //obtener ultimos registros
         $registros = Registro::get(5);
         foreach($registros as $registro){
