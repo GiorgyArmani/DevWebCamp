@@ -4,7 +4,7 @@
     if (grafica){
         obtenerDatos();
         async function obtenerDatos(){
-            const url = '/api/regalos'
+            const url = `${location.origin}/api/regalos`;
             const respuesta = await fetch(url)
             const resultado = await respuesta.json();
 
